@@ -1,70 +1,59 @@
-# Real-Estate-Agency
+# Real Estate Agency
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a real estate agency web application. I've created it as a pet project for my portfolio.
 
-## Recommended IDE Setup
+## The Project Structure
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This project supposed to contain the following content.
 
-## Recommended Browser Setup
+### Home Page
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+The main page of the website it should contain these components.
 
-## Type Support for `.vue` Imports in TS
+- Hero (headline + search bar);
+- Featured properties;
+- "Why choose us" section;
+- Testimonials;
+- Call-to-action (contact/browse).
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Listings Page
 
-## Customize configuration
+This page should contain the core logic of the project.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Property cards grid;
+- Filters:
+  - Property type (apartment, house, etc.);
+  - Bedrooms;
+  - Location (basic dropdown or text);
+- Sorting (price, newest).
 
-## Project Setup
+### Property Details Page
 
-```sh
-npm install
-```
+When clicking a listing:
 
-### Compile and Hot-Reload for Development
+Include:
 
-```sh
-npm run dev
-```
+- Image gallery;
+- Price;
+- Description;
+- Key info (rooms, size, etc.);
+- Contact form ("Request info").
 
-### Type-Check, Compile and Minify for Production
+And maybe:
 
-```sh
-npm run build
-```
+- Save/Favorite button.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### About Page
 
-```sh
-npm run test:unit
-```
+This should tell about the company that "owns" the website. It should contain this content:
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+- Company description;
+- Team members (fake data is fine).
 
-```sh
-npm run test:e2e:dev
-```
+But it can even just be lorem ipsum in my case.
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+### Contact Page
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Contact form (important!);
+- Email/phone (fake);
+- Map (optional).
