@@ -50,8 +50,30 @@ const search = () => {
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(135deg, var(--bs-purple), var(--bs-gray-600));
+  background: linear-gradient(
+    135deg,
+    color-mix(in lch, var(--bs-green) 90%, transparent),
+    color-mix(in lch, var(--bs-blue) 90%, transparent),
+    color-mix(in lch, var(--bs-indigo) 90%, transparent),
+    color-mix(in lch, var(--bs-purple) 90%, transparent),
+    color-mix(in lch, var(--bs-gray-600) 90%, transparent)
+  );
   color: var(--bs-white);
+
+  background-size: 200% 200%;
+  animation: moveGradient 8s ease infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .overlay {
