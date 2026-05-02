@@ -50,7 +50,7 @@ const search = () => {
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(135deg, var(--bs-indigo), var(--bs-gray-600));
+  background: linear-gradient(135deg, var(--bs-purple), var(--bs-gray-600));
   color: var(--bs-white);
 }
 
@@ -62,6 +62,7 @@ const search = () => {
 
 .content {
   position: relative;
+  max-width: 700px;
   z-index: 1;
 }
 
