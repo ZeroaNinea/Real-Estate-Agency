@@ -50,8 +50,8 @@ const search = () => {
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
-  color: white;
+  background: linear-gradient(135deg, var(--bs-indigo), var(--bs-gray-600));
+  color: var(--bs-white);
 }
 
 .overlay {
@@ -71,7 +71,7 @@ const search = () => {
 }
 
 .subtitle {
-  color: #cbd5f5;
+  color: var(--bs-gray-200);
   margin-bottom: 2rem;
 }
 
