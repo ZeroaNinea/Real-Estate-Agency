@@ -118,6 +118,10 @@ const search = () => {
   cursor: pointer;
 }
 
+button {
+  isolation: isolate;
+}
+
 .btn-content {
   position: relative;
   z-index: 1;
