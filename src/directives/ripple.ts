@@ -1,11 +1,20 @@
 export const vRipple = {
   mounted(el: HTMLElement, binding: { value: string }) {
-    const color = binding.value || 'rgba(255, 255, 255, 0.4)'
+    const color = binding.value || 'rgba(255,255,255,0.4)'
 
     el.style.position = 'relative'
-    el.style.overflow = 'hidden'
 
-    el.addEventListener('click', (e: MouseEvent) => {
+    const container = document.createElement('span')
+    container.style.position = 'absolute'
+    container.style.inset = '0'
+    container.style.overflow = 'hidden'
+    container.style.borderRadius = 'inherit'
+    container.style.pointerEvents = 'none'
+    container.style.zIndex = '0'
+
+    el.appendChild(container)
+
+    el.addEventListener('pointerdown', (e: PointerEvent) => {
       const ripple = document.createElement('span')
 
       const rect = el.getBoundingClientRect()
@@ -23,9 +32,8 @@ export const vRipple = {
       ripple.style.transform = 'scale(0)'
       ripple.style.animation = 'ripple 600ms ease-out'
       ripple.style.pointerEvents = 'none'
-      ripple.style.zIndex = '0'
 
-      el.appendChild(ripple)
+      container.appendChild(ripple)
 
       setTimeout(() => ripple.remove(), 600)
     })
