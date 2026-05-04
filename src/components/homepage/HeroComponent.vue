@@ -50,25 +50,21 @@ const search = () => {
   justify-content: center;
   text-align: center;
 
-  /* background: linear-gradient(
-    100deg,
-    color-mix(in lch, var(--bs-green) 90%, transparent),
-    color-mix(in lch, var(--bs-blue) 90%, transparent),
-    color-mix(in lch, var(--bs-indigo) 90%, transparent),
-    color-mix(in lch, var(--bs-purple) 90%, transparent),
-    color-mix(in lch, var(--bs-gray-600) 90%, transparent),
-    color-mix(in lch, var(--bs-purple) 90%, transparent),
-    color-mix(in lch, var(--bs-indigo) 90%, transparent),
-    color-mix(in lch, var(--bs-blue) 90%, transparent),
-    color-mix(in lch, var(--bs-green) 90%, transparent)
-  ); */
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://static.photos/estate/200x200/20.webp') center/cover no-repeat;
+  background: url('https://static.photos/estate/1200x630/20.webp') center/cover no-repeat;
   color: var(--bs-white);
+}
 
-  /* background-size: 200% 200%; */
-  /* animation: moveGradient 20s ease infinite; */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in lch, var(--bs-gray-900) 75%, transparent),
+    color-mix(in lch, var(--bs-gray-900) 80%, transparent)
+  );
+
+  background-size: 200% 200%;
+  animation: moveGradient 20s ease infinite;
 }
 
 @keyframes moveGradient {
@@ -78,12 +74,6 @@ const search = () => {
   to {
     background-position: 200% 50%;
   }
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .content {
