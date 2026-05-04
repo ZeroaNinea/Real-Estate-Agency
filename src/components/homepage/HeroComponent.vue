@@ -51,12 +51,16 @@ const search = () => {
   text-align: center;
 
   background: linear-gradient(
-    135deg,
+    100deg,
     color-mix(in lch, var(--bs-green) 90%, transparent),
     color-mix(in lch, var(--bs-blue) 90%, transparent),
     color-mix(in lch, var(--bs-indigo) 90%, transparent),
     color-mix(in lch, var(--bs-purple) 90%, transparent),
-    color-mix(in lch, var(--bs-gray-600) 90%, transparent)
+    color-mix(in lch, var(--bs-gray-600) 90%, transparent),
+    color-mix(in lch, var(--bs-purple) 90%, transparent),
+    color-mix(in lch, var(--bs-indigo) 90%, transparent),
+    color-mix(in lch, var(--bs-blue) 90%, transparent),
+    color-mix(in lch, var(--bs-green) 90%, transparent)
   );
   color: var(--bs-white);
 
@@ -65,14 +69,11 @@ const search = () => {
 }
 
 @keyframes moveGradient {
-  0% {
+  from {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  to {
+    background-position: 200% 50%;
   }
 }
 
