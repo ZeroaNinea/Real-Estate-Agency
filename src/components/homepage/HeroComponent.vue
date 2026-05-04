@@ -61,7 +61,7 @@ const search = () => {
   color: var(--bs-white);
 
   background-size: 200% 200%;
-  animation: moveGradient 8s ease infinite;
+  animation: moveGradient 20s ease infinite;
 }
 
 @keyframes moveGradient {
