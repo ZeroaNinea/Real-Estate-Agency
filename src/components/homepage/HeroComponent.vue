@@ -50,7 +50,7 @@ const search = () => {
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     100deg,
     color-mix(in lch, var(--bs-green) 90%, transparent),
     color-mix(in lch, var(--bs-blue) 90%, transparent),
@@ -61,11 +61,14 @@ const search = () => {
     color-mix(in lch, var(--bs-indigo) 90%, transparent),
     color-mix(in lch, var(--bs-blue) 90%, transparent),
     color-mix(in lch, var(--bs-green) 90%, transparent)
-  );
+  ); */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://static.photos/estate/200x200/20.webp') center/cover no-repeat;
   color: var(--bs-white);
 
-  background-size: 200% 200%;
-  animation: moveGradient 20s ease infinite;
+  /* background-size: 200% 200%; */
+  /* animation: moveGradient 20s ease infinite; */
 }
 
 @keyframes moveGradient {
