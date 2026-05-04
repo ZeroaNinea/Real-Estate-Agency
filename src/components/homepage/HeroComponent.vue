@@ -8,13 +8,15 @@ const location = ref('')
 const type = ref('')
 
 const search = () => {
-  router.push({
-    path: '/listings',
-    query: {
-      location: location.value,
-      type: type.value,
-    },
-  })
+  setTimeout(() => {
+    router.push({
+      path: '/listings',
+      query: {
+        location: location.value,
+        type: type.value,
+      },
+    })
+  }, 300)
 }
 </script>
 
@@ -35,7 +37,13 @@ const search = () => {
           <option value="house">House</option>
         </select>
 
-        <button @click="search" class="btn btn-primary">Search</button>
+        <button
+          @click="search"
+          class="btn btn-primary"
+          v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
+        >
+          <span class="btn-content">Search</span>
+        </button>
       </div>
     </div>
   </section>
@@ -108,5 +116,10 @@ const search = () => {
 .search-bar button {
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.btn-content {
+  position: relative;
+  z-index: 1;
 }
 </style>
