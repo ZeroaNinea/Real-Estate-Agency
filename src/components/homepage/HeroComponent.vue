@@ -60,7 +60,9 @@ const search = () => {
   background: linear-gradient(
     135deg,
     color-mix(in lch, var(--bs-gray-900) 75%, transparent),
-    color-mix(in lch, var(--bs-gray-900) 80%, transparent)
+    color-mix(in lch, var(--bs-gray-900) 80%, transparent),
+    color-mix(in lch, var(--bs-gray-900) 80%, transparent),
+    color-mix(in lch, var(--bs-gray-900) 75%, transparent)
   );
 
   background-size: 200% 200%;
