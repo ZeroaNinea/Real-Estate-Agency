@@ -1,3 +1,5 @@
+import { type RevealOptions } from '@/types/reveal-options.alias'
+
 function directionToCss(direction: 'top' | 'bottom' | 'left' | 'right') {
   switch (direction) {
     case 'top':
@@ -12,18 +14,22 @@ function directionToCss(direction: 'top' | 'bottom' | 'left' | 'right') {
 }
 
 export const vReveal = {
-  mounted(el: HTMLElement, binding: { value: 'top' | 'bottom' | 'left' | 'right' }) {
-    const animationDirection = binding.value || 'top'
+  mounted(el: HTMLElement, binding: { value: RevealOptions }) {
+    const { direction = 'top', delay = 0 } = binding.value || {}
 
-    el.style.opacity = '0'
-    el.style.transform = directionToCss(animationDirection)
+    el.style.opacity = '0.1'
+    el.style.filter = 'blur(2px)'
+    el.style.transform = directionToCss(direction)
     el.style.transition = 'all 0.6s ease'
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry?.isIntersecting) {
-        el.style.opacity = '1'
-        el.style.transform = 'translateY(0)'
-        el.style.transform = 'translateX(0)'
+        setTimeout(() => {
+          el.style.opacity = '1'
+          el.style.filter = 'blur(0)'
+          el.style.transform = 'translate(0, 0)'
+        }, delay)
+
         observer.unobserve(el)
       }
     })
