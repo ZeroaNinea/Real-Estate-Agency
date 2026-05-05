@@ -20,7 +20,7 @@ export const vReveal = {
     el.style.opacity = '0.1'
     el.style.filter = 'blur(2px)'
     el.style.transform = directionToCss(direction)
-    el.style.transition = 'all 0.6s ease'
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry?.isIntersecting) {
