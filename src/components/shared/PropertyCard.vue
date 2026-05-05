@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card">
+  <div v-reveal class="card">
     <img class="card-img-top" :src="property.image" :alt="property.title" />
 
     <div class="card-body">
