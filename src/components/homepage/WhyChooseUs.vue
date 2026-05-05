@@ -33,16 +33,15 @@ const features = [
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" v-for="(item, index) in features" :key="index">
-          <div
-            class="feature-card text-center h-100"
-            v-reveal="{ direction: 'bottom', delay: index * 100 }"
-          >
-            <div class="icon mb-3">
-              <i :class="['bi', item.icon]"></i>
-            </div>
+          <div class="feature-wrapper" v-reveal="{ direction: 'bottom', delay: index * 100 }">
+            <div class="feature-card text-center h-100">
+              <div class="icon mb-3">
+                <i :class="['bi', item.icon]"></i>
+              </div>
 
-            <h5>{{ item.title }}</h5>
-            <p class="text-muted">{{ item.description }}</p>
+              <h5>{{ item.title }}</h5>
+              <p class="text-muted">{{ item.description }}</p>
+            </div>
           </div>
         </div>
       </div>
