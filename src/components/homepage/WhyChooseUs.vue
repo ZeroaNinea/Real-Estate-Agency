@@ -8,7 +8,7 @@ const features = [
   {
     title: 'Local Expertise',
     description: 'We know the market and help you choose wisely.',
-    icon: 'bi-graph-up-arrow text-success',
+    icon: 'bi-graph-up-arrow text-primary',
   },
   {
     title: 'Transparent Pricing',
@@ -18,7 +18,7 @@ const features = [
   {
     title: 'Fast Support',
     description: 'Quick responses when you need help.',
-    icon: 'bi-person-hearts text-danger',
+    icon: 'bi-person-hearts text-success',
   },
 ]
 </script>
