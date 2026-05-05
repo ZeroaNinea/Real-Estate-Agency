@@ -51,7 +51,21 @@ const features = [
 </template>
 
 <style scoped>
-.bi {
-  font-size: 2.8rem;
+.feature-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bs-white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
 }
 </style>
