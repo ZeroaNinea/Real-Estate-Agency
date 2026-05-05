@@ -1,9 +1,30 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
+
+const isSticky = ref(false)
+
+const handleScroll = () => {
+  isSticky.value = window.scrollY > 0
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div style="height: 56px"></div>
+  <nav
+    :class="[
+      'navbar navbar-expand-lg navbar-light shadow-sm',
+      isSticky ? 'navbar-sticky' : 'navbar-default',
+    ]"
+  >
     <div class="container">
       <RouterLink to="/" class="navbar-brand">Estate</RouterLink>
 
@@ -77,6 +98,44 @@ import { RouterLink } from 'vue-router'
 
   .navbar-nav {
     margin: 0;
+  }
+}
+
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-default {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: var(--bs-white);
+}
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  backdrop-filter: blur(10px);
+  background-color: color-mix(in lch, var(--bs-white) 95%, transparent);
+
+  transform: translateY(0);
+}
+
+.navbar-sticky {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
