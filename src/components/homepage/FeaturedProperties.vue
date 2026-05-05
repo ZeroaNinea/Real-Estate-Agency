@@ -44,13 +44,14 @@ const properties: Property[] = [
     <h1>Featured Properties</h1>
     <div class="row g-4">
       <div class="col-sm" v-for="(property, index) in properties" :key="property.id">
-        <PropertyCard
+        <div
           v-reveal="{
             direction: index === 0 ? 'left' : index === properties.length - 1 ? 'right' : 'bottom',
             delay: index * 100,
           }"
-          :property="property"
-        />
+        >
+          <PropertyCard :property="property" />
+        </div>
       </div>
     </div>
   </section>
