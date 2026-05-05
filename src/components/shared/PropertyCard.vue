@@ -37,6 +37,14 @@ defineProps<{
 </template>
 
 <style scoped>
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
 button {
   isolation: isolate;
 }

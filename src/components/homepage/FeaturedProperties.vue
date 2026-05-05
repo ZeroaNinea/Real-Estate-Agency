@@ -40,7 +40,7 @@ const properties: Property[] = [
 </script>
 
 <template>
-  <section class="container d-flex flex-column align-items-center">
+  <section class="container d-flex flex-column align-items-center gap-2">
     <h1>Featured Properties</h1>
     <div class="row g-4">
       <div class="col-sm" v-for="property in properties" :key="property.id">
