@@ -47,7 +47,7 @@ function toListings() {
 </script>
 
 <template>
-  <section class="container py-5">
+  <section class="container">
     <div class="section-header mb-4">
       <h2 class="section-title">Featured Properties</h2>
       <p class="section-subtitle">Explore some of our best listings</p>
