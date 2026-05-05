@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card h-100">
+  <div class="card">
     <img class="card-img-top" :src="property.image" :alt="property.title" />
 
     <div class="card-body">
@@ -19,7 +19,23 @@ defineProps<{
         {{ property.description }}
       </p>
 
-      <button class="btn btn-primary">View Details</button>
+      <button
+        v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
+        class="btn btn-primary"
+      >
+        <span class="btn-content">View Details</span>
+      </button>
     </div>
   </div>
 </template>
+
+<style scoped>
+button {
+  isolation: isolate;
+}
+
+.btn-content {
+  position: relative;
+  z-index: 1;
+}
+</style>

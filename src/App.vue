@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
-import FeaturedProperties from '@/components/homepage/FeaturedProperties.vue'
 </script>
 
 <template>
   <AppHeader />
   <RouterView />
-  <FeaturedProperties />
 </template>
 
 <style scoped>

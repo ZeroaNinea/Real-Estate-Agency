@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PropertyCard from '@/components/shared/PropertyCard.vue'
 import type Property from '@/types/property.interface'
 
 const properties: Property[] = [
@@ -7,7 +8,7 @@ const properties: Property[] = [
     title: 'Modern Apartment',
     description: 'Beautiful apartment in the city center.',
     price: 120000,
-    image: 'https://static.photos/estate/400x300/1.webp',
+    image: 'https://static.photos/estate/320x240/1.webp',
     location: 'Yerevan',
     type: 'apartment',
     bedrooms: 2,
@@ -18,7 +19,7 @@ const properties: Property[] = [
     title: 'Luxury House',
     description: 'Spacious house with a garden.',
     price: 350000,
-    image: 'https://static.photos/estate/400x300/2.webp',
+    image: 'https://static.photos/estate/320x240/2.webp',
     location: 'Dilijan',
     type: 'house',
     bedrooms: 4,
@@ -29,7 +30,7 @@ const properties: Property[] = [
     title: 'Cozy Studio',
     description: 'Perfect for one person.',
     price: 60000,
-    image: 'https://static.photos/estate/400x300/3.webp',
+    image: 'https://static.photos/estate/320x240/3.webp',
     location: 'Gyumri',
     type: 'studio',
     bedrooms: 1,
@@ -39,11 +40,19 @@ const properties: Property[] = [
 </script>
 
 <template>
-  <section>
+  <section class="container d-flex flex-column align-items-center">
+    <h1>Featured Properties</h1>
     <div class="row g-4">
-      <div class="col-md-4" v-for="property in properties" :key="property.id">
+      <div class="col-sm" v-for="property in properties" :key="property.id">
         <PropertyCard :property="property" />
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.container {
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+</style>
