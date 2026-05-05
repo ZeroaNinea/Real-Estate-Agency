@@ -43,8 +43,11 @@ const properties: Property[] = [
   <section class="container d-flex flex-column align-items-center gap-2">
     <h1>Featured Properties</h1>
     <div class="row g-4">
-      <div class="col-sm" v-for="property in properties" :key="property.id">
-        <PropertyCard :property="property" />
+      <div class="col-sm" v-for="(property, index) in properties" :key="property.id">
+        <PropertyCard
+          v-reveal="index === 0 ? 'left' : index === properties.length - 1 ? 'right' : 'bottom'"
+          :property="property"
+        />
       </div>
     </div>
   </section>
