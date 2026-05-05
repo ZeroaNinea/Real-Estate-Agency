@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import PropertyCard from '@/components/shared/PropertyCard.vue'
 import type Property from '@/types/property.interface'
+import { useRouter } from 'vue-router'
 
 const properties: Property[] = [
   {
@@ -37,13 +38,23 @@ const properties: Property[] = [
     area: 40,
   },
 ]
+
+const router = useRouter()
+
+function toListings() {
+  setTimeout(() => router.push('/listings'), 300)
+}
 </script>
 
 <template>
-  <section class="container d-flex flex-column align-items-center gap-2">
-    <h1>Featured Properties</h1>
+  <section class="container py-5">
+    <div class="section-header mb-4">
+      <h2 class="section-title">Featured Properties</h2>
+      <p class="section-subtitle">Explore some of our best listings</p>
+    </div>
+
     <div class="row g-4">
-      <div class="col-sm" v-for="(property, index) in properties" :key="property.id">
+      <div class="col-md-6 col-lg-4" v-for="(property, index) in properties" :key="property.id">
         <div
           v-reveal="{
             direction: index === 0 ? 'left' : index === properties.length - 1 ? 'right' : 'bottom',
@@ -53,6 +64,16 @@ const properties: Property[] = [
           <PropertyCard :property="property" />
         </div>
       </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button
+        v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
+        @click="toListings"
+        class="btn btn-outline-primary"
+      >
+        View All Properties
+      </button>
     </div>
   </section>
 </template>
