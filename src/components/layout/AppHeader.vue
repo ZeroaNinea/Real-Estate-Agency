@@ -8,6 +8,7 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/" class="navbar-brand">Estate</RouterLink>
 
       <button
+        v-ripple="'color-mix(in lch, var(--bs-gray) 45%, transparent)'"
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -22,7 +23,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink
               v-ripple="'color-mix(in oklab, var(--bs-blue) 20%, var(--bs-gray) 45%, transparent)'"
               to="/"
-              class="nav-link rounded-pill"
+              class="nav-link px-2"
               >Home</RouterLink
             >
           </li>
@@ -30,7 +31,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink
               v-ripple="'color-mix(in oklab, var(--bs-blue) 20%, var(--bs-gray) 45%, transparent)'"
               to="/listings"
-              class="nav-link rounded-pill"
+              class="nav-link px-2"
               >Listings</RouterLink
             >
           </li>
@@ -38,7 +39,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink
               v-ripple="'color-mix(in oklab, var(--bs-blue) 20%, var(--bs-gray) 45%, transparent)'"
               to="/about"
-              class="nav-link rounded-pill"
+              class="nav-link px-2"
               >About</RouterLink
             >
           </li>
@@ -46,7 +47,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink
               v-ripple="'color-mix(in oklab, var(--bs-blue) 20%, var(--bs-gray) 45%, transparent)'"
               to="/contact"
-              class="nav-link rounded-pill"
+              class="nav-link px-2"
               >Contact</RouterLink
             >
           </li>
@@ -63,5 +64,19 @@ import { RouterLink } from 'vue-router'
 
 .nav-link:hover {
   background-color: color-mix(in oklab, var(--bs-blue) 10%, var(--bs-white) 20%, transparent);
+}
+
+.navbar-nav {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    border-radius: 20px;
+  }
+
+  .navbar-nav {
+    margin: 0;
+  }
 }
 </style>
