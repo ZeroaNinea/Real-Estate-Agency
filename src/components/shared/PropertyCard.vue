@@ -19,6 +19,13 @@ defineProps<{
         {{ property.description }}
       </p>
 
+      <p class="card-text">
+        <small class="text-muted"
+          >Bedrooms: {{ property.bedrooms }}; Area: {{ property.area }} m2; Type:
+          {{ property.type }};</small
+        >
+      </p>
+
       <button
         v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
         class="btn btn-primary"
