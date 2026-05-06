@@ -29,6 +29,9 @@ const testimonials = [
       <div class="col-md-6 col-lg-4" v-for="(testimonial, index) in testimonials" :key="index">
         <div v-reveal="{ direction: 'bottom', delay: index * 100 }">
           <div class="testimonial-card h-100">
+            <div class="mb-2 text-primary">
+              <i class="bi bi-quote"></i>
+            </div>
             <p class="testimonial-text">"{{ testimonial.text }}"</p>
 
             <div class="testimonial-user mt-3">
