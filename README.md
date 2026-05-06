@@ -57,3 +57,41 @@ But it can even just be lorem ipsum in my case.
 - Contact form (important!);
 - Email/phone (fake);
 - Map (optional).
+
+### Deployment (GitHub Pages)
+
+Install `gh-pages`:
+
+```bash
+npm install gh-pages --save-dev
+```
+
+Add a new script for deployment in `package.json`:
+
+```bash
+"scripts": {
+  "deploy": "gh-pages -d dist"
+}
+```
+
+Edit `vite.config.ts`:
+
+```ts
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [vue(), vueDevTools()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  // Add only for deployment with `gh-pages`.
+  base: '/Real-Estate-Agency/',
+})
+```
