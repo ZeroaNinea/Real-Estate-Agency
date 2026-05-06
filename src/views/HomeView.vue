@@ -3,6 +3,7 @@ import HeroComponent from '@/components/homepage/HeroComponent.vue'
 import FeaturedProperties from '@/components/homepage/FeaturedProperties.vue'
 import WhyChooseUs from '@/components/homepage/WhyChooseUs.vue'
 import TestimonialsList from '@/components/homepage/TestimonialsList.vue'
+import CallToAction from '@/components/homepage/CallToAction.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import TestimonialsList from '@/components/homepage/TestimonialsList.vue'
   <FeaturedProperties />
   <WhyChooseUs />
   <TestimonialsList />
+  <CallToAction />
 </template>
 
 <style scoped></style>
