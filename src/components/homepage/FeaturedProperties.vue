@@ -68,7 +68,7 @@ function toListings() {
 
     <div class="text-center mt-4">
       <button
-        v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
+        v-ripple="'color-mix(in oklab, var(--bs-blue) 50%, var(--bs-white) 15%, transparent)'"
         @click="toListings"
         class="btn btn-outline-primary"
       >
