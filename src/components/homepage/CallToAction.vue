@@ -8,9 +8,21 @@
       </p>
 
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <RouterLink to="/listings" class="btn btn-light"> Browse Properties </RouterLink>
+        <RouterLink
+          v-ripple="'color-mix(in oklab, var(--bs-indigo) 30%, var(--bs-gray) 60%, transparent)'"
+          to="/listings"
+          class="btn btn-light"
+        >
+          Browse Properties
+        </RouterLink>
 
-        <RouterLink to="/contact" class="btn btn-outline-light"> Contact Us </RouterLink>
+        <RouterLink
+          v-ripple="'color-mix(in oklab, var(--bs-indigo) 30%, var(--bs-gray) 60%, transparent)'"
+          to="/contact"
+          class="btn btn-outline-light"
+        >
+          Contact Us
+        </RouterLink>
       </div>
     </div>
   </section>
