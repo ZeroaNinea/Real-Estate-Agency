@@ -95,3 +95,7 @@ export default defineConfig({
   base: '/Real-Estate-Agency/',
 })
 ```
+
+### Life Version
+
+[https://zeroaninea.github.io/Real-Estate-Agency/](https://zeroaninea.github.io/Real-Estate-Agency/)
