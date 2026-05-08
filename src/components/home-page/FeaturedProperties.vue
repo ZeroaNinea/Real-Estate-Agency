@@ -19,7 +19,11 @@ function toListings() {
     </div>
 
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4" v-for="(property, index) in properties" :key="property.id">
+      <div
+        class="col-md-6 col-lg-4"
+        v-for="(property, index) in properties.slice(0, 3)"
+        :key="property.id"
+      >
         <div
           v-reveal="{
             direction: index === 0 ? 'left' : index === properties.length - 1 ? 'right' : 'bottom',
