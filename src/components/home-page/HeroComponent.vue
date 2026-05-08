@@ -2,6 +2,8 @@
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 
+import { propertyTypes } from '@/types/property.interface'
+
 const router = useRouter()
 
 const location = ref('')
@@ -33,8 +35,9 @@ const search = () => {
 
         <select v-model="type" class="form-select">
           <option value="">Any Type</option>
-          <option value="apartment">Apartment</option>
-          <option value="house">House</option>
+          <option v-for="type in propertyTypes" v-bind:key="type" :value="type">
+            {{ type }}
+          </option>
         </select>
 
         <button

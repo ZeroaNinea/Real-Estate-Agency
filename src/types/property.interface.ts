@@ -5,7 +5,11 @@ export default interface Property {
   price: number
   image: string
   location: string
-  type: string
+  type: 'apartment' | 'house' | 'villa' | 'studio'
   bedrooms: number
   area: number
 }
+
+export type PropertyType = 'apartment' | 'house' | 'villa' | 'studio'
+
+export const propertyTypes: PropertyType[] = ['apartment', 'house', 'villa', 'studio']
