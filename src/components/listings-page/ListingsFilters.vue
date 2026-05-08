@@ -11,15 +11,13 @@ const bedrooms = ref('')
 const sort = ref('')
 
 const search = () => {
-  setTimeout(() => {
-    router.push({
-      path: '/listings',
-      query: {
-        location: location.value,
-        type: type.value,
-      },
-    })
-  }, 300)
+  router.push({
+    path: '/listings',
+    query: {
+      location: location.value,
+      type: type.value,
+    },
+  })
 }
 </script>
 
