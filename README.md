@@ -25,7 +25,9 @@ This page should contain the core logic of the project.
   - Property type (apartment, house, etc.);
   - Bedrooms;
   - Location (basic dropdown or text);
-- Sorting (price, newest).
+- Results count;
+- Pagination;
+- Empty state (no results).
 
 ### Property Details Page
 
