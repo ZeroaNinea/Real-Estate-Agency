@@ -21,31 +21,35 @@ const search = () => {
 </script>
 
 <template>
-  <div class="listings-filters">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="input-group">
-            <input v-model="location" class="form-control" placeholder="Location" />
+  <section>
+    <div class="listings-filters">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input v-model="location" class="form-control" placeholder="Location" />
 
-            <select v-model="type" class="form-select">
-              <option value="">Any Type</option>
-              <option value="apartment">Apartment</option>
-              <option value="house">House</option>
-            </select>
+              <select v-model="type" class="form-select">
+                <option value="">Any Type</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+              </select>
 
-            <button
-              @click="search"
-              class="btn btn-primary"
-              v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
-            >
-              <span class="btn-content">Search</span>
-            </button>
+              <button
+                @click="search"
+                class="btn btn-primary"
+                v-ripple="
+                  'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'
+                "
+              >
+                <span class="btn-content">Search</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped></style>
