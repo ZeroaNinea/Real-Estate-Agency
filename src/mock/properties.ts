@@ -80,17 +80,6 @@ export const properties: Property[] = [
   },
   {
     id: 8,
-    title: 'Spacious Villa',
-    description: 'Beautiful villa with a pool.',
-    price: 400000,
-    image: 'https://static.photos/estate/320x240/5.webp',
-    location: 'Dilijan',
-    type: 'villa',
-    bedrooms: 4,
-    area: 250,
-  },
-  {
-    id: 9,
     title: 'Beautiful Apartment',
     description: 'Spacious apartment with a balcony.',
     price: 180000,
