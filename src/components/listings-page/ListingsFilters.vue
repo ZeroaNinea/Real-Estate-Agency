@@ -53,6 +53,7 @@ const search = () => {
 
           <div class="col-lg">
             <select v-model="sort" class="form-select">
+              <option value="">Sort By</option>
               <option value="newest">Newest</option>
               <option value="low-high">Price: Low to High</option>
               <option value="high-low">Price: High to Low</option>
