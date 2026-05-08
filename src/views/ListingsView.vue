@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
+</script>
 
 <template>
-  <h1>Listings</h1>
+  <ListingsTitle />
 </template>
 
 <style scoped></style>
