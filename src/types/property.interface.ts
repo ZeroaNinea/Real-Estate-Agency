@@ -8,6 +8,7 @@ export default interface Property {
   type: 'apartment' | 'house' | 'villa' | 'studio'
   bedrooms: number
   area: number
+  date: string
 }
 
 export type PropertyType = 'apartment' | 'house' | 'villa' | 'studio'

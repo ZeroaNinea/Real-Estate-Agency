@@ -11,6 +11,7 @@ export const properties: Property[] = [
     type: 'apartment',
     bedrooms: 2,
     area: 85,
+    date: '2022-01-01',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const properties: Property[] = [
     type: 'house',
     bedrooms: 4,
     area: 200,
+    date: '2022-02-01',
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ export const properties: Property[] = [
     type: 'studio',
     bedrooms: 1,
     area: 40,
+    date: '2022-03-01',
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ export const properties: Property[] = [
     type: 'villa',
     bedrooms: 5,
     area: 300,
+    date: '2019-04-01',
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ export const properties: Property[] = [
     type: 'villa',
     bedrooms: 4,
     area: 250,
+    date: '2018-05-01',
   },
   {
     id: 6,
@@ -66,6 +71,7 @@ export const properties: Property[] = [
     type: 'house',
     bedrooms: 4,
     area: 200,
+    date: '2022-02-01',
   },
   {
     id: 7,
@@ -77,6 +83,7 @@ export const properties: Property[] = [
     type: 'villa',
     bedrooms: 5,
     area: 300,
+    date: '2019-04-01',
   },
   {
     id: 8,
@@ -88,5 +95,6 @@ export const properties: Property[] = [
     type: 'apartment',
     bedrooms: 3,
     area: 100,
+    date: '2021-06-01',
   },
 ]
