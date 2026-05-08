@@ -89,4 +89,15 @@ export const properties: Property[] = [
     bedrooms: 4,
     area: 250,
   },
+  {
+    id: 9,
+    title: 'Beautiful Apartment',
+    description: 'Spacious apartment with a balcony.',
+    price: 180000,
+    image: 'https://static.photos/estate/320x240/6.webp',
+    location: 'Yerevan',
+    type: 'apartment',
+    bedrooms: 3,
+    area: 100,
+  },
 ]
