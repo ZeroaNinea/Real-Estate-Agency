@@ -7,6 +7,9 @@ const router = useRouter()
 const location = ref('')
 const type = ref('')
 
+const bedrooms = ref('')
+const sort = ref('')
+
 const search = () => {
   setTimeout(() => {
     router.push({
@@ -21,30 +24,49 @@ const search = () => {
 </script>
 
 <template>
-  <section>
-    <div class="listings-filters">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="input-group">
-              <input v-model="location" class="form-control" placeholder="Location" />
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-wrapper">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg">
+            <input v-model="location" class="form-control" placeholder="Location" />
+          </div>
 
-              <select v-model="type" class="form-select">
-                <option value="">Any Type</option>
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-              </select>
+          <div class="col-lg">
+            <select v-model="type" class="form-select">
+              <option value="">Any Type</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="villa">Villa</option>
+            </select>
+          </div>
 
-              <button
-                @click="search"
-                class="btn btn-primary"
-                v-ripple="
-                  'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'
-                "
-              >
-                <span class="btn-content">Search</span>
-              </button>
-            </div>
+          <div class="col-lg">
+            <select v-model="bedrooms" class="form-select">
+              <option value="">Bedrooms</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+
+          <div class="col-lg">
+            <select v-model="sort" class="form-select">
+              <option value="newest">Newest</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </div>
+
+          <div class="col-auto">
+            <button
+              @click="search"
+              class="btn btn-primary px-4"
+              v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
+            >
+              <span class="btn-content"> Search </span>
+            </button>
           </div>
         </div>
       </div>
@@ -52,4 +74,21 @@ const search = () => {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.filters-section {
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.filters-wrapper {
+  background: var(--bs-white);
+
+  padding: 24px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(10px);
+}
+</style>
