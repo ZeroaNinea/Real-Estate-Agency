@@ -1,26 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-
 import { propertyTypes } from '@/types/property.interface'
 
-const router = useRouter()
+defineProps<{
+  location: string
+  type: string
+  bedrooms: string
+  sort: string
+}>()
 
-const location = ref('')
-const type = ref('')
-
-const bedrooms = ref('')
-const sort = ref('')
-
-const search = () => {
-  router.push({
-    path: '/listings',
-    query: {
-      location: location.value,
-      type: type.value,
-    },
-  })
-}
+const emit = defineEmits<{
+  (e: 'update:location', value: string): void
+  (e: 'update:type', value: string): void
+  (e: 'update:bedrooms', value: string): void
+  (e: 'update:sort', value: string): void
+}>()
 </script>
 
 <template>
@@ -29,20 +22,37 @@ const search = () => {
       <div class="filters-wrapper">
         <div class="row g-3 align-items-center">
           <div class="col-lg">
-            <input v-model="location" class="form-control" placeholder="Location" />
+            <input
+              :value="location"
+              @input="emit('update:location', ($event.target as HTMLInputElement).value)"
+              class="form-control"
+              placeholder="Location"
+            />
           </div>
 
           <div class="col-lg">
-            <select v-model="type" class="form-select">
+            <select
+              :value="type"
+              @change="emit('update:type', ($event.target as HTMLSelectElement).value)"
+              class="form-select"
+            >
               <option value="">Any Type</option>
-              <option v-for="type in propertyTypes" v-bind:key="type" :value="type">
-                {{ type }}
+              <option
+                v-for="propertyType in propertyTypes"
+                :key="propertyType"
+                :value="propertyType"
+              >
+                {{ propertyType }}
               </option>
             </select>
           </div>
 
           <div class="col-lg">
-            <select v-model="bedrooms" class="form-select">
+            <select
+              :value="bedrooms"
+              @change="emit('update:bedrooms', ($event.target as HTMLSelectElement).value)"
+              class="form-select"
+            >
               <option value="">Bedrooms</option>
               <option value="1">1+</option>
               <option value="2">2+</option>
@@ -52,22 +62,16 @@ const search = () => {
           </div>
 
           <div class="col-lg">
-            <select v-model="sort" class="form-select">
+            <select
+              :value="sort"
+              @change="emit('update:sort', ($event.target as HTMLSelectElement).value)"
+              class="form-select"
+            >
               <option value="">Sort By</option>
               <option value="newest">Newest</option>
               <option value="low-high">Price: Low to High</option>
               <option value="high-low">Price: High to Low</option>
             </select>
-          </div>
-
-          <div class="col-auto">
-            <button
-              @click="search"
-              class="btn btn-primary px-4"
-              v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
-            >
-              <span class="btn-content"> Search </span>
-            </button>
           </div>
         </div>
       </div>
@@ -84,12 +88,9 @@ const search = () => {
 
 .filters-wrapper {
   background: var(--bs-white);
-
   padding: 24px;
   border-radius: 20px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
   backdrop-filter: blur(10px);
 }
 </style>
