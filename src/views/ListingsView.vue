@@ -79,7 +79,7 @@ watch([location, type, bedrooms, sort], () => {
     v-model:sort="sort"
   />
 
-  <section>
+  <section class="mb-5">
     <ListingsGrid :properties="paginatedProperties" :propertyCount="filteredProperties.length" />
     <ListingsPagination
       :pages="totalPages"
