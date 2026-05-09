@@ -4,13 +4,14 @@ import type Property from '@/types/property.interface'
 
 defineProps<{
   properties: Property[]
+  propertyCount: number
 }>()
 </script>
 
 <template>
   <section class="container py-5">
     <h2>Property Listings</h2>
-    <p class="text-muted">We have {{ properties.length }} properties available</p>
+    <p class="text-muted">We have {{ propertyCount }} properties available</p>
 
     <div v-if="properties.length > 0" class="row g-4">
       <div class="col-md-6 col-lg-4" v-for="(property, index) in properties" :key="property.id">

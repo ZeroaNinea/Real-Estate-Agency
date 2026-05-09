@@ -20,7 +20,7 @@ const paginatedProperties = computed(() => {
 <template>
   <ListingsTitle />
   <ListingsFilters />
-  <ListingsGrid :properties="paginatedProperties" />
+  <ListingsGrid :properties="paginatedProperties" :propertyCount="properties.length" />
   <ListingsPagination
     :pages="Math.ceil(properties.length / itemsPerPage)"
     @change-page="currentPage = $event"
