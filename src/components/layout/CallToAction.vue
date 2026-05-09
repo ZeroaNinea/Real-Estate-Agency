@@ -1,5 +1,5 @@
 <template>
-  <section class="cta-section text-center text-white">
+  <div class="cta-section text-center text-white">
     <div class="container">
       <h2 class="cta-title mb-3">Find Your Perfect Home Today</h2>
 
@@ -25,7 +25,7 @@
         </RouterLink>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>

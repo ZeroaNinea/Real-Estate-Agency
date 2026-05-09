@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="container py-5">
+  <div class="container py-5">
     <h2>Property Listings</h2>
     <p class="text-muted">We have {{ propertyCount }} properties available</p>
 
@@ -30,5 +30,5 @@ defineProps<{
       <h3 class="mt-3">No Properties Found</h3>
       <p class="text-muted">Try adjusting your filters.</p>
     </div>
-  </section>
+  </div>
 </template>

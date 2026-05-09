@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
+import CallToAction from '@/components/layout/CallToAction.vue'
 </script>
 
 <template>
   <header>
     <AppHeader />
   </header>
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <footer>
+    <CallToAction />
+  </footer>
 </template>
 
 <style scoped>

@@ -72,7 +72,6 @@ watch([location, type, bedrooms, sort], () => {
 
 <template>
   <ListingsTitle />
-
   <ListingsFilters
     v-model:location="location"
     v-model:type="type"
@@ -80,13 +79,14 @@ watch([location, type, bedrooms, sort], () => {
     v-model:sort="sort"
   />
 
-  <ListingsGrid :properties="paginatedProperties" :propertyCount="filteredProperties.length" />
-
-  <ListingsPagination
-    :pages="totalPages"
-    :currentPage="currentPage"
-    @change-page="currentPage = $event"
-  />
+  <section>
+    <ListingsGrid :properties="paginatedProperties" :propertyCount="filteredProperties.length" />
+    <ListingsPagination
+      :pages="totalPages"
+      :currentPage="currentPage"
+      @change-page="currentPage = $event"
+    />
+  </section>
 </template>
 
 <style scoped></style>
