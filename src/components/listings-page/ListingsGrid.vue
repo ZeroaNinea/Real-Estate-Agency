@@ -5,8 +5,8 @@ import { properties } from '@/mock/properties'
 
 <template>
   <section class="container py-5">
-    <h1>Listings</h1>
-    <p>Listing cards go here</p>
+    <h2>Property Listings</h2>
+    <p class="text-muted">We have {{ properties.length }} properties available</p>
 
     <div v-if="properties.length > 0" class="row g-4">
       <div class="col-md-6 col-lg-4" v-for="property in properties" :key="property.id">
