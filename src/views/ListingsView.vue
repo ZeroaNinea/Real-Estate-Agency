@@ -2,12 +2,14 @@
 import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
 import ListingsFilters from '@/components/listings-page/ListingsFilters.vue'
 import ListingsGrid from '@/components/listings-page/ListingsGrid.vue'
+
+import { properties } from '@/mock/properties'
 </script>
 
 <template>
   <ListingsTitle />
   <ListingsFilters />
-  <ListingsGrid />
+  <ListingsGrid :properties="properties" />
 </template>
 
 <style scoped></style>
