@@ -2,7 +2,7 @@
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 
-import { propertyTypes } from '@/types/property.interface'
+import { propertyTypes } from '@/types/property.interface.js'
 
 const router = useRouter()
 

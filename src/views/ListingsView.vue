@@ -6,7 +6,7 @@ import ListingsFilters from '@/components/listings-page/ListingsFilters.vue'
 import ListingsGrid from '@/components/listings-page/ListingsGrid.vue'
 import ListingsPagination from '@/components/listings-page/ListingsPagination.vue'
 
-import { properties } from '@/mock/properties'
+import { properties } from '@/mock/properties.js'
 
 const location = ref('')
 const type = ref('')
