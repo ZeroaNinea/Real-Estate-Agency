@@ -15,7 +15,7 @@ const emit = defineEmits<{
       <li class="page-item mx-1">
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
-          class="page-link btn"
+          :class="['page-link btn', currentPage === 1 ? 'disabled' : '']"
           @click="emit('change-page', 1)"
         >
           <span class="btn-content"><i class="bi bi-skip-backward"></i></span>
@@ -24,7 +24,7 @@ const emit = defineEmits<{
       <li class="page-item mx-1">
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
-          class="page-link btn"
+          :class="['page-link btn', currentPage === 1 ? 'disabled' : '']"
           @click="emit('change-page', currentPage - 1 < 1 ? 1 : currentPage - 1)"
         >
           <span class="btn-content"><i class="bi bi-caret-left"></i></span>
@@ -46,7 +46,7 @@ const emit = defineEmits<{
       <li class="page-item mx-1">
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
-          class="page-link btn"
+          :class="['page-link btn', currentPage === pages ? 'disabled' : '']"
           @click="emit('change-page', currentPage + 1 > pages ? pages : currentPage + 1)"
         >
           <span class="btn-content"><i class="bi bi-caret-right"></i></span>
@@ -55,7 +55,7 @@ const emit = defineEmits<{
       <li class="page-item mx-1">
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
-          class="page-link btn"
+          :class="['page-link btn', currentPage === pages ? 'disabled' : '']"
           @click="emit('change-page', pages)"
         >
           <span class="btn-content"><i class="bi bi-skip-forward"></i></span>
