@@ -13,5 +13,5 @@ export default defineConfig({
     },
   },
   // Add only for deployment with `gh-pages`.
-  base: '/Real-Estate-Agency/',
+  // base: '/Real-Estate-Agency/',
 })
