@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PropertyCard from '@/components/shared/PropertyCard.vue'
-import type Property from '@/types/property.interface.js'
+import type Property from '@/types/property.interface'
 
 defineProps<{
   properties: Property[]

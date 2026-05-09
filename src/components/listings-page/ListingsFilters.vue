@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { propertyTypes } from '@/types/property.interface.js'
+import { propertyTypes } from '@/types/property.interface'
 
 defineProps<{
   location: string

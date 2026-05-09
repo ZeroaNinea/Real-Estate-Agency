@@ -2,7 +2,7 @@
 import PropertyCard from '@/components/shared/PropertyCard.vue'
 import { useRouter } from 'vue-router'
 
-import { properties } from '@/mock/properties.js'
+import { properties } from '@/mock/properties'
 
 const router = useRouter()
 
