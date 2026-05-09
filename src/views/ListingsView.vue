@@ -1,4 +1,4 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 
 import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
@@ -89,10 +89,4 @@ watch([location, type, bedrooms, sort], () => {
   </section>
 </template>
 
-<style scoped></style> -->
-
-<script setup lang="ts"></script>
-
-<template>
-  <h1>Listings Page Works!</h1>
-</template>
+<style scoped></style>
