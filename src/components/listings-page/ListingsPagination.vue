@@ -16,6 +16,15 @@ const emit = defineEmits<{
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
           class="page-link btn"
+          @click="emit('change-page', 1)"
+        >
+          <span class="btn-content"><i class="bi bi-skip-backward"></i></span>
+        </button>
+      </li>
+      <li class="page-item mx-1">
+        <button
+          v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
+          class="page-link btn"
           @click="emit('change-page', currentPage - 1 < 1 ? 1 : currentPage - 1)"
         >
           <span class="btn-content"><i class="bi bi-caret-left"></i></span>
@@ -41,6 +50,15 @@ const emit = defineEmits<{
           @click="emit('change-page', currentPage + 1 > pages ? pages : currentPage + 1)"
         >
           <span class="btn-content"><i class="bi bi-caret-right"></i></span>
+        </button>
+      </li>
+      <li class="page-item mx-1">
+        <button
+          v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
+          class="page-link btn"
+          @click="emit('change-page', pages)"
+        >
+          <span class="btn-content"><i class="bi bi-skip-forward"></i></span>
         </button>
       </li>
     </ul>
