@@ -127,7 +127,7 @@ export const properties: Property[] = [
     description: 'Premium villa with breathtaking mountain views.',
     price: 720000,
     image: 'https://static.photos/estate/320x240/11.webp',
-    location: 'Tsaghkadzor',
+    location: "Ts'aghkadzor",
     type: 'villa',
     bedrooms: 6,
     area: 420,
