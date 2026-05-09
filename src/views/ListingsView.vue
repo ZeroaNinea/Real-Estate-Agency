@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {
-  // computed,
-  ref,
-  watch,
-} from 'vue'
+// import {
+//   computed,
+//   ref,
+//   watch,
+// } from 'vue'
 
 import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
 // import ListingsFilters from '@/components/listings-page/ListingsFilters.vue'
@@ -12,12 +12,12 @@ import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
 
 // import { properties } from '@/mock/properties'
 
-const location = ref('')
-const type = ref('')
-const bedrooms = ref('')
-const sort = ref('newest')
+// const location = ref('')
+// const type = ref('')
+// const bedrooms = ref('')
+// const sort = ref('newest')
 
-const currentPage = ref(1)
+// const currentPage = ref(1)
 // const itemsPerPage = 6
 
 // const filteredProperties = computed(() => {
@@ -69,9 +69,9 @@ const currentPage = ref(1)
 // )
 
 // Reset to page 1 whenever filters change.
-watch([location, type, bedrooms, sort], () => {
-  currentPage.value = 1
-})
+// watch([location, type, bedrooms, sort], () => {
+//   currentPage.value = 1
+// })
 </script>
 
 <template>
