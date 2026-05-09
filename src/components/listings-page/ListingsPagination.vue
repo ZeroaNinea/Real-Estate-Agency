@@ -1,5 +1,11 @@
 <script setup lang="ts">
-defineProps<{ pages: number }>()
+defineProps<{
+  pages: number
+}>()
+
+const emit = defineEmits<{
+  (e: 'change-page', page: number): void
+}>()
 </script>
 
 <template>
@@ -9,6 +15,7 @@ defineProps<{ pages: number }>()
         <button
           v-ripple="'color-mix(in lch, var(--bs-black) 45%, transparent)'"
           class="page-link btn"
+          @click="emit('change-page', page)"
         >
           <span class="btn-content">{{ page }}</span>
         </button>
