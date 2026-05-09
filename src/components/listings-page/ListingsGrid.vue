@@ -25,8 +25,10 @@ defineProps<{
         </div>
       </div>
     </div>
-    <div v-else>
-      <p>X_X No properties found...</p>
+    <div v-else class="text-center py-5">
+      <i class="bi bi-house-x fs-1 text-muted"></i>
+      <h3 class="mt-3">No Properties Found</h3>
+      <p class="text-muted">Try adjusting your filters.</p>
     </div>
   </section>
 </template>
