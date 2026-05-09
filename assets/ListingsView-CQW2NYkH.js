@@ -1,0 +1,1 @@
+import{_ as e,s as t,t as n}from"./_plugin-vue_export-helper-Dvyq7Jdi.js";var r={};function i(n,r){return e(),t(`h1`,null,`Listings Page Works!`)}var a=n(r,[[`render`,i]]);export{a as default};
