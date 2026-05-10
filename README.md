@@ -98,6 +98,24 @@ export default defineConfig({
 })
 ```
 
+### Deployment (Cloudflare Pages)
+
+To deploy to Cloudflare Pages, add the following configuration to `wrangler.jsonc`:
+
+```jsonc
+{
+  "name": "real-estate-agency",
+  "compatibility_date": "2026-05-10",
+  "assets": {
+    "directory": "./dist/",
+    "not_found_handling": "single-page-application",
+  },
+}
+```
+
+There is no need to edit `vite.config.ts`. Keep it as it was.
+
 ### Life Version
 
-[https://zeroaninea.github.io/Real-Estate-Agency/](https://zeroaninea.github.io/Real-Estate-Agency/)
+- GitHub Pages (only the first page):[https://zeroaninea.github.io/Real-Estate-Agency/](https://zeroaninea.github.io/Real-Estate-Agency/)
+- Cloudflare Pages (full the entire site): [https://real-estate-agency.zeroaninea.workers.dev/](https://real-estate-agency.zeroaninea.workers.dev/)
