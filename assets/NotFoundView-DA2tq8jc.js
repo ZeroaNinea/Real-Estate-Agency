@@ -1,0 +1,1 @@
+import{a as e,s as t,t as n,v as r}from"./_plugin-vue_export-helper-C1Fyh-kR.js";var i={},a={class:`container py-5`};function o(n,i){return r(),t(`div`,a,[...i[0]||=[e(`div`,{class:`row`},[e(`div`,{class:`col-12 text-center`},[e(`h1`,{class:`display-3`},`404`),e(`h2`,{class:`display-5`},`Page Not Found`)])],-1)]])}var s=n(i,[[`render`,o]]);export{s as default};
