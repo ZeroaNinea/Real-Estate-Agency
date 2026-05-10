@@ -1,4 +1,4 @@
-// `createWebHistory` replaced with `createWebHashHistory` for production.
+// `createWebHistory` replaced with `createWebHashHistory` for production. But I decided to reverse it later because it didn't help.
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -9,11 +9,11 @@ const router = createRouter({
       name: 'home',
       component: () => import('@/views/HomeView.vue'),
     },
-    // {
-    //   path: '/listings',
-    //   name: 'listings',
-    //   component: () => import('@/views/ListingsView.vue'),
-    // },
+    {
+      path: '/listings',
+      name: 'listings',
+      component: () => import('@/views/ListingsView.vue'),
+    },
   ],
 })
 
