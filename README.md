@@ -6,7 +6,7 @@ This is a real estate agency web application. I've created it as a pet project f
 
 This project supposed to contain the following content.
 
-### Home Page
+### Home Page ✅
 
 The main page of the website it should contain these components.
 
@@ -16,7 +16,7 @@ The main page of the website it should contain these components.
 - Testimonials;
 - Call-to-action (contact/browse).
 
-### Listings Page
+### Listings Page ✅
 
 This page should contain the core logic of the project.
 
@@ -29,7 +29,7 @@ This page should contain the core logic of the project.
 - Pagination;
 - Empty state (no results).
 
-### Property Details Page
+### Property Details Page ✅
 
 When clicking a listing:
 
@@ -45,7 +45,7 @@ And maybe:
 
 - Save/Favorite button.
 
-### About Page
+### About Page ✅
 
 This should tell about the company that "owns" the website. It should contain this content:
 
