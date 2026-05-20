@@ -33,7 +33,9 @@
                 <p class="text-muted mb-0">
                   This website is a fictional portfolio project created for demonstration purposes
                   only. All properties, team members, and contact information are entirely
-                  fictitious.
+                  fictitious. All the assets received from the
+                  <a href="https://static.photos/">https://static.photos/</a> website are used for
+                  demonstration purposes.
                 </p>
               </div>
 
