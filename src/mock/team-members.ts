@@ -1,3 +1,5 @@
+import type TeamMember from '@/types/team-members.interface'
+
 export default [
   {
     id: 1,
@@ -20,4 +22,4 @@ export default [
     image: 'https://static.photos/people/200x200/85.webp',
     bio: 'Expert in digital marketing and customer outreach.',
   },
-]
+] as TeamMember[]
