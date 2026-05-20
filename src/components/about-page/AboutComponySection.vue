@@ -15,7 +15,7 @@
           </p>
         </div>
 
-        <!-- Main Card. -->
+        <!-- Main Card -->
         <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
           <div class="card-body p-4 p-md-5">
             <div class="row g-4 align-items-center">
@@ -37,7 +37,7 @@
                 </p>
               </div>
 
-              <!-- Statistics. -->
+              <!-- Statistics -->
               <div class="col-lg-4">
                 <div class="stats-grid">
                   <div class="stat-card">
@@ -60,7 +60,7 @@
           </div>
         </div>
 
-        <!-- Optional Values Section. -->
+        <!-- Optional Values Section -->
         <div class="row g-4 mt-4">
           <div class="col-md-4">
             <div class="value-card h-100">
