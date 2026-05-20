@@ -82,6 +82,7 @@ const property = computed(() => {
     </div>
 
     <div v-else class="text-center py-5">
+      <i class="bi bi-house-x fs-1 text-muted"></i>
       <h1>Property Not Found</h1>
       <p class="text-muted">The property you are looking for does not exist.</p>
     </div>
