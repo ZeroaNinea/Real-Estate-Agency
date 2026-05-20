@@ -1,6 +1,6 @@
 import type Property from '@/types/property.interface'
 
-export const properties: Property[] = [
+export default [
   {
     id: 1,
     title: 'Modern Apartment',
@@ -145,4 +145,4 @@ export const properties: Property[] = [
     area: 110,
     date: '2022-09-12',
   },
-]
+] as Property[]
