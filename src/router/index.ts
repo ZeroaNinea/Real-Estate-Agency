@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('@/views/ListingsView.vue'),
     },
     {
+      path: '/property/:id',
+      name: 'property',
+      component: () => import('@/views/PropertyView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),

@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import type Property from '@/types/property.interface.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 defineProps<{
   property: Property
 }>()
+
+function toProperty(id: number) {
+  router.push({ name: 'property', params: { id } })
+}
 </script>
 
 <template>
@@ -38,6 +45,7 @@ defineProps<{
       <button
         v-ripple="'color-mix(in oklab, var(--bs-blue) 75%, var(--bs-white) 15%, transparent)'"
         class="btn btn-primary mt-auto"
+        @click="toProperty(property.id)"
       >
         <span class="btn-content">View Details</span>
       </button>
