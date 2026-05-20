@@ -9,7 +9,7 @@ defineProps<{
 }>()
 
 function toProperty(id: number) {
-  router.push({ name: 'property', params: { id } })
+  router.push({ name: 'property-details', params: { id } })
 }
 </script>
 
