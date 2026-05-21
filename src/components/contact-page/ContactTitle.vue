@@ -2,7 +2,7 @@
   <section class="contact-header">
     <div class="overlay"></div>
     <div class="container">
-      <h1 class="title">Contact DreamHome Reality</h1>
+      <h1 class="title">Contact DreamHome Realty</h1>
 
       <p class="subtitle">We'd love to help you find your perfect property.</p>
     </div>
