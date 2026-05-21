@@ -35,21 +35,21 @@
 
       <p class="mb-2">
         <i class="bi bi-geo-alt-fill"></i>
-        <span class="text-muted"> 123 Main Street, Kat silēz City</span>
+        <span class="text-muted mx-2">123 Main Street, Kat silēz City</span>
       </p>
 
       <p class="mb-2">
         <i class="bi bi-telephone-fill"></i>
-        <span class="text-muted"> (bleh) 123-4567-890 silly_brain</span>
+        <span class="text-muted mx-2">(bleh) 123-4567-890 silly_brain</span>
       </p>
 
       <p class="mb-2">
-        <i class="bi bi-envelope-fill"></i><span class="text-muted"> kat.sile@email.com</span>
+        <i class="bi bi-envelope-fill"></i><span class="text-muted mx-2">kat.sile@email.com</span>
       </p>
 
       <p class="mb-2">
         <i class="bi bi-alarm-fill"></i>
-        <span class="text-muted"> Monday - Friday: 9:00 AM - 5:00 PM</span>
+        <span class="text-muted mx-2">Monday - Friday: 9:00 AM - 5:00 PM</span>
       </p>
     </div>
   </section>
