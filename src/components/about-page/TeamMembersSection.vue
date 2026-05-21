@@ -19,8 +19,15 @@ import teamMembers from '@/mock/team-members'
 
     <!-- Team Grid -->
     <div class="row g-4">
-      <div v-for="member in teamMembers" :key="member.id" class="col-12 col-md-6 col-lg-4">
-        <TeamMemberCard :member="member" />
+      <div v-for="(member, index) in teamMembers" :key="member.id" class="col-12 col-md-6 col-lg-4">
+        <div
+          v-reveal="{
+            direction: index === 0 ? 'left' : index === teamMembers.length - 1 ? 'right' : 'bottom',
+            delay: index * 100,
+          }"
+        >
+          <TeamMemberCard :member="member" />
+        </div>
       </div>
     </div>
   </section>

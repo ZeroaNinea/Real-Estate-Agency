@@ -64,7 +64,13 @@
 
         <!-- Optional Values Section -->
         <div class="row g-4 mt-4">
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            v-reveal="{
+              direction: 'left',
+              delay: 1 * 100,
+            }"
+          >
             <div class="value-card h-100">
               <h3 class="h5 fw-semibold mb-2">Trust</h3>
               <p class="text-muted mb-0">
@@ -73,7 +79,13 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            v-reveal="{
+              direction: 'bottom',
+              delay: 2 * 100,
+            }"
+          >
             <div class="value-card h-100">
               <h3 class="h5 fw-semibold mb-2">Expertise</h3>
               <p class="text-muted mb-0">
@@ -82,7 +94,13 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            v-reveal="{
+              direction: 'right',
+              delay: 3 * 100,
+            }"
+          >
             <div class="value-card h-100">
               <h3 class="h5 fw-semibold mb-2">Commitment</h3>
               <p class="text-muted mb-0">
