@@ -54,7 +54,7 @@ This should tell about the company that "owns" the website. It should contain th
 
 But it can even just be lorem ipsum in my case.
 
-### Contact Page
+### Contact Page ✅
 
 - Contact form (important!);
 - Email/phone (fake);
