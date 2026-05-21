@@ -16,7 +16,7 @@
           <textarea
             class="form-control"
             rows="4"
-            placeholder="I'm interested in this property."
+            placeholder="I have a question to the company."
           ></textarea>
         </div>
 
