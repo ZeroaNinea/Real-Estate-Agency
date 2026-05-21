@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ContactTitle from '@/components/contact-page/ContactTitle.vue'
+</script>
+
 <template>
-  <h1>Contact</h1>
+  <ContactTitle />
 </template>
