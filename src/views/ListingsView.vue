@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 import ListingsTitle from '@/components/listings-page/ListingsTitle.vue'
 import ListingsFilters from '@/components/listings-page/ListingsFilters.vue'
@@ -8,13 +9,27 @@ import ListingsPagination from '@/components/listings-page/ListingsPagination.vu
 
 import properties from '@/mock/properties'
 
-const location = ref('')
-const type = ref('')
-const bedrooms = ref('')
-const sort = ref('newest')
+const route = useRoute()
+const router = useRouter()
+
+const location = ref(route.query.location?.toString() ?? '')
+const type = ref(route.query.type?.toString() ?? '')
+const bedrooms = ref(route.query.bedrooms?.toString() ?? '')
+const sort = ref(route.query.sort?.toString() ?? '')
 
 const currentPage = ref(1)
 const itemsPerPage = 6
+
+watch([location, type, bedrooms, sort], () => {
+  router.replace({
+    query: {
+      location: location.value || undefined,
+      type: type.value || undefined,
+      bedrooms: bedrooms.value || undefined,
+      sort: sort.value || undefined,
+    },
+  })
+})
 
 const filteredProperties = computed(() => {
   let result = [...properties]
