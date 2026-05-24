@@ -24,7 +24,7 @@ const features = [
 </script>
 
 <template>
-  <section class="bg-light py-5">
+  <section class="py-5">
     <div class="container">
       <div class="section-header mb-5 text-center">
         <h2 class="section-title">Why Choose Us</h2>
@@ -50,10 +50,17 @@ const features = [
 </template>
 
 <style scoped>
+section {
+  background: var(--bs-tertiary-bg);
+}
+
+.feature-wrapper {
+  height: 100%;
+}
 .feature-card {
   padding: 20px;
   border-radius: 12px;
-  background: var(--bs-white);
+  background: var(--bs-body-bg);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -61,7 +68,7 @@ const features = [
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs-box-shadow-lg);
 }
 
 .icon {

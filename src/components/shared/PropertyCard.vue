@@ -62,7 +62,7 @@ function toProperty(id: number) {
 }
 
 .property-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--bs-box-shadow-lg);
 }
 
 /* Image. */

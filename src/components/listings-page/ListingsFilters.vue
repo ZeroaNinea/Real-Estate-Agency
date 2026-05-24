@@ -87,10 +87,10 @@ const emit = defineEmits<{
 }
 
 .filters-wrapper {
-  background: var(--bs-white);
+  background: var(--bs-body-bg);
   padding: 24px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--bs-box-shadow-lg);
   backdrop-filter: blur(10px);
 }
 </style>

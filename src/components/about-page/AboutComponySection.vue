@@ -126,7 +126,7 @@
 }
 
 .stat-card {
-  background: var(--bs-light);
+  background: var(--bs-tertiary-bg);
   border-radius: 1rem;
   padding: 1.25rem;
   text-align: center;
@@ -146,7 +146,7 @@
 }
 
 .value-card {
-  background: var(--bs-light);
+  background: var(--bs-tertiary-bg);
   border-radius: 1rem;
   padding: 1.5rem;
   transition:
@@ -155,7 +155,7 @@
 }
 
 .value-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs-box-shadow-lg);
   transform: translateY(-5px);
 }
 </style>

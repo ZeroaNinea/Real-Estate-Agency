@@ -36,7 +36,7 @@ defineProps<{
 }
 
 .team-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--bs-box-shadow-lg) !important;
   transform: translateY(-4px);
 }
 

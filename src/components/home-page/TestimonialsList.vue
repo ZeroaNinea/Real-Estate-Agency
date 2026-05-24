@@ -32,7 +32,7 @@ const testimonials = [
             <div class="mb-2 text-primary">
               <i class="bi bi-quote"></i>
             </div>
-            <p class="testimonial-text">"{{ testimonial.text }}"</p>
+            <p class="testimonial-text text-muted">"{{ testimonial.text }}"</p>
 
             <div class="testimonial-user mt-3">
               <strong>{{ testimonial.name }}</strong>
@@ -51,7 +51,7 @@ const testimonials = [
 .testimonial-card {
   padding: 20px;
   border-radius: 12px;
-  background: var(--bs-light);
+  background: var(--bs-tertiary-bg);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -59,11 +59,10 @@ const testimonials = [
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs-box-shadow-lg);
 }
 
 .testimonial-text {
   font-style: italic;
-  color: var(--bs-gray-700);
 }
 </style>

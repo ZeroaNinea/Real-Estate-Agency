@@ -110,7 +110,7 @@ onUnmounted(() => {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: var(--bs-white);
+  background-color: var(--bs-body-bg);
 }
 
 .navbar-sticky {
@@ -119,7 +119,7 @@ onUnmounted(() => {
   width: 100%;
 
   backdrop-filter: blur(10px);
-  background-color: color-mix(in lch, var(--bs-white) 95%, transparent);
+  background-color: color-mix(in lch, var(--bs-body-bg) 95%, transparent);
 
   transform: translateY(0);
 }
